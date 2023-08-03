@@ -66,6 +66,6 @@ Yes. Just make sure the api is available and optimize performance as much as pos
 #### 4. Can I use 3rd party library to speed up the code? For example TensorRT/Onnxruntime and so on.   
 Yes. You can use any legal code to optimize performance. It should be noted that if you have converted the model format, you need to provide a script for converting the model.
 
-#### 5. Is the image format jpeg/jpg or png?
-Both are OK.
+#### 5. What image format should I use? 
+jpeg/jpg/png are OK. But in network transmission, you should use base64 encoding.
 
