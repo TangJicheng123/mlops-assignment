@@ -54,7 +54,7 @@ https://huggingface.co/blog/controlnet
 https://github.com/lllyasviel/ControlNet    
 
 ## FAQ
-#### 1. Controlnet has a lot of parameters, should I need to add input parameters in the server ?  
+#### 1. Controlnet has a lot of parameters, should I need to add input parameters in the server api ?  
 No need to add new parameters, you can set the default value directly in the server.
 
 #### 2. There are many models in ControlNet, and there are also many base models for stable diffusion. Which one should I use ?
@@ -63,7 +63,7 @@ You can choose any of the available models. For reference, the ControlNet model,
 #### 3. Can I implement it in other languages like C/C++/CUDA/Go?  
 Yes. Just make sure the api is available and optimize performance as much as possible  
 
-#### 4. Can I use 3rd party library to speed up the library? For example TensorRT/Onnxruntime and so on.   
+#### 4. Can I use 3rd party library to speed up the code? For example TensorRT/Onnxruntime and so on.   
 Yes. You can use any legal code to optimize performance. It should be noted that if you have converted the model format, you need to provide a script for converting the model.
 
 #### 5. Is the image format jpeg/jpg or png?
