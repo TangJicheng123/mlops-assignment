@@ -17,6 +17,9 @@ $$Attetion(Q, K, V, t) = TemperatureSoftmax(Q*K^T / \sqrt d_k , t) * V$$
   
 Temperature parameter is in (0, 1]. if t==1, it is same as origin softmax.  
 
+Please note, you can only replace the Softmax used in ControlNet with TemperatureSoftmax;   
+You **must not** modify the Softmax used elsewhere in the program.
+
 For the implementation of temperature softmax, please refer to the link below:    
 
 https://en.wikipedia.org/wiki/Softmax_function#Reinforcement_learning    
@@ -64,7 +67,11 @@ docekr run -d -p 8000:8000 mlops:v1
 python example/client.py
 ```
 
-#### 2. Performance   
+#### 2. Feature implementation    
+
+You need complete the above Temperature ControlNet feature with good code design
+
+#### 3. Performance   
 The performance on the GPU is more important.  
 please make sure your code can take advantage of CUDA.  
 
