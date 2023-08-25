@@ -6,6 +6,24 @@ You should first fork this repository, and then send us the code or the url of y
 
 Please do not submit any pull requests to this repository.
 
+## ControlNet with Temperature
+You need to implement a ControlNet feature, temperature control.  
+In ControlNet, the Attention operator is used extensively. The calculation operation of Attention is as follows:  
+$$Attetion(Q, K, V) = Softmax(Q*K^T / \sqrt d_k) * V$$  
+
+You need to replace the original softmax with temperature softmax, and use the parameter t inputed by the user in the following formula.  
+
+$$Attetion(Q, K, V, t) = TemperatureSoftmax(Q*K^T / \sqrt d_k , t) * V$$  
+  
+Temperature parameter is in (0, 1]. if t==1, it is same as origin softmax.  
+
+For the implementation of temperature softmax, please refer to the link below:    
+
+https://en.wikipedia.org/wiki/Softmax_function#Reinforcement_learning    
+
+https://www.baeldung.com/cs/softmax-temperature    
+
+
 ## Input/Output
 ```
 curl -X 'POST' \
