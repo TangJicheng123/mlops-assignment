@@ -14,7 +14,8 @@ data = {
     "request_id": 1234,
     "text": "a muscle man",
     "input_image_base64": input_image_str,
-    "random_seed": 5678
+    "random_seed": 5678,
+    "temperature": 0.5
 }
 
 headers = {

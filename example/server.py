@@ -10,13 +10,14 @@ class InputData(BaseModel):
     text: str
     input_image_base64: str
     random_seed: int
+    temperature: float
 
 class OutputData(BaseModel):
     request_id: int
     output_image_base64: str
 
 def fake_process_image(prompt: str, image_base64: str, seed: int) -> str:
-    # Based on the input, we need to generate the output image 
+    # Based on the input, you need to generate the output image 
     # and encode it to base64. 
     # Here, we are just demonstrating the process and not actually generating the image.
     with open("./output.png", "rb") as image_file:
