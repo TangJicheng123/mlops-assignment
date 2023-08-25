@@ -29,8 +29,8 @@ Should return:
 }
 ```
 
-I gave an example of server.py in the example/ for your reference,  
-you need implement a server with the same api.   
+An example of server.py is in the example/ ,
+you need implement a server with the same api.
 
 ## Delivery
 - Dockerfile: To generate an application image
@@ -38,7 +38,7 @@ you need implement a server with the same api.
 
 ## Evaluation
 #### 1. Service availability     
-We will use the following command to deploy your code based on the Dockerfile you provided.   
+Your code will be deployed with the Dockerfile you provided.   
 ```
 docker build -t mlops:v1 .
 docekr run -d -p 8000:8000 mlops:v1
@@ -46,8 +46,8 @@ python example/client.py
 ```
 
 #### 2. Performance   
-We measure the performance of your code by request latency.    
-We care more about the performance of your code on the GPU, please make sure your code can take advantage of CUDA
+The performance on the GPU is more important.  
+please make sure your code can take advantage of CUDA.  
 
 ## Reference
 https://huggingface.co/blog/controlnet     
@@ -60,11 +60,11 @@ No need to add new parameters, you can set the default value directly in the ser
 #### 2. There are many models in ControlNet, and there are also many base models for stable diffusion. Which one should I use ?
 You can choose any of the available models. For reference, the ControlNet model, cannay-type models can be used. The base model can use the model of sd v1.5
 
-#### 3. Can I implement it in other languages like C/C++/CUDA/Go?  
+#### 3. Can I implement it in other languages like C/C++/CUDA/Go instead of Python ?  
 Yes. Just make sure the api is available and optimize performance as much as possible  
 
 #### 4. Can I use 3rd party library to speed up the code? For example TensorRT/Onnxruntime and so on.   
-Yes. You can use any legal code to optimize performance. It should be noted that if you have converted the model format, you need to provide a script for converting the model.
+Yes. You can use any legal code to optimize performance. It should be noted that if you have converted the model format, you need to provide a script for converting the model.  
 
 #### 5. What image format should I use? 
 jpeg/jpg/png are OK. But in network transmission, you should use base64 encoding.
