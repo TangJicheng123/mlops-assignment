@@ -60,11 +60,10 @@ you need implement a server with the same api.
 
 ## Evaluation
 #### 1. Service availability     
-Your code will be deployed with the Dockerfile you provided.   
+Your code will be deployed with the Dockerfile you provided for testing.   
 ```
 docker build -t mlops:v1 .
 docekr run -d -p 8000:8000 mlops:v1
-python example/client.py
 ```
 
 #### 2. Feature implementation    
