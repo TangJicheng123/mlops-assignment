@@ -74,7 +74,7 @@ You need complete the above Temperature ControlNet feature with good code design
 The performance on the GPU is more important.  
 please make sure your code can take advantage of CUDA.  
 
-## Reference
+## Reference of ControlNet
 https://huggingface.co/blog/controlnet     
 https://github.com/lllyasviel/ControlNet    
 
